@@ -1,3 +1,4 @@
+
 employees = {
     "John": {
         # 一个季度的考勤天数
@@ -11,4 +12,9 @@ employees = {
         }
     }
 }
-# 添加新员工
+
+employees["ddd"]= {}
+employees['ddd']["attendance"]= [20, 211, 19]
+employees['ddd']['extra_info'] = {"position": "Manager","contact": "11112345678" }
+print(employees)
+
