@@ -1,5 +1,5 @@
-s1 = "hello\t hogwarts \"world\"\n"
-s2 = "hello\t hogwarts\\ \'world\'"
+# s1 = "hello\t hogwarts \"world\"\n"
+# s2 = "hello\t hogwarts\\ \'world\'"
 # print(s1,s2)
 # # 取
 # # print('取字符串中的第3个字母',s1[90])
@@ -78,10 +78,26 @@ url = "https://www.ceshirencom "
 #     print('第一位数和第五位数不一样，不符合要求~~~')
 #
 # print('当前输入的五位数字为：', num.strip())
+#
+# story = "Once upon a time, in a land far away, lived a brave knight named Arthur."
+# print(f'{story}单词数量:', len(story.split()))
+# print('主人公名字的位置为：', story.find('Arthur'))
+# print('替换名字：',story.replace('Arthur', 'tangyuan'))
+# print('将故事改为大写：', story.upper())
+# print('将故事改为小写：', story.lower())
 
-story = "Once upon a time, in a land far away, lived a brave knight named Arthur."
-print(f'{story}单词数量:', len(story.split()))
-print('主人公名字的位置为：', story.find('Arthur'))
-print('替换名字：',story.replace('Arthur', 'tangyuan'))
-print('将故事改为大写：', story.upper())
-print('将故事改为小写：', story.lower())
+# s= ['Hello', 'Hello']
+# # print(s[-3: -1])
+# # print(s[::-1])
+# # print(s[1:5:3])
+# a = len(s)
+# print(a)
+
+# story = "Once upon a time, in a land far away, lived a brave knight named Arthur."
+# #统计故事中单词的数量
+# list1 = story.split()
+# print(list1)
+# print(len(list1))
+a ,b = 1,2
+b,a = a,b
+print(a,b)
