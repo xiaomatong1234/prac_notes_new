@@ -140,8 +140,17 @@
 nums = [12,34,3,6,56,33434,6,3,23,23,23,57,78,11,1,8,9]
 
 '''
-
+# def num(nums):
 #
+#     return sum(nums), max(nums), min(nums), sum(nums)/len(nums)
+#
+#
+#
+# nums =  [12,34,3,6,56,33434,6,3,23,23,23,57,78,11,1,8,9]
+# if __name__ == '__main__':
+#     print(list(num(nums)))
+
+
 # nums = [12,34,3,6,56,33434,6,3,23,23,23,57,78,11,1,8,9]
 # # lens=len(nums)
 # # print(lens)
@@ -173,5 +182,5 @@ nums = [12,34,3,6,56,33434,6,3,23,23,23,57,78,11,1,8,9]
 # n_sum,n_max,n_min,n_avg = num_list_count(nums)
 # # print(num_list_count(nums))
 # print(n_sum,n_max,n_min,n_avg)
-
-
+#
+#
