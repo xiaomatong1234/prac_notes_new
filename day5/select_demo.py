@@ -14,8 +14,6 @@ def select_demo(arr):
     :param arr:
     :return:
     '''
-
-
     #外层循环
     for i in range(len(arr)-1): # i 未排序状态的值
         min_idx = i # 定义最小值下角标index

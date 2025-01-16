@@ -16,7 +16,6 @@ def bubble_sort(arr):
                 arr[j], arr[j+1] = arr[j+1], arr[j]
 
     return arr
-
 # 优化第一版后
 def bubble_sort2(arr):
     # 控制循环次数
