@@ -19,17 +19,17 @@ class User:
         self.login_attempts = 0 # 设置login_attempts属性为0
         print('重置用户登陆次数：',self.login_attempts)
 
+if __name__ == '__main__':
+    # 创建User的实例
+    user1 = User('张','三',18)
+    # 增加用户登陆次数
+    user1.increment_login_attempts()
+    user1.increment_login_attempts()
+    user1.increment_login_attempts()
 
-# 创建User的实例
-user1 = User('张','三',18)
-# 增加用户登陆次数
-user1.increment_login_attempts()
-user1.increment_login_attempts()
-user1.increment_login_attempts()
 
-
-# 重置用户登陆次数
-user1.reset_login_attempts()
+    # 重置用户登陆次数
+    user1.reset_login_attempts()
 
 
 

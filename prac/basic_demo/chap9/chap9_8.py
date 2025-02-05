@@ -21,13 +21,13 @@ class Admin(User):
         super().__init__(first_name, last_name, age)
         self.privileges = Privileges() # 将Privileges类作为属性
 
-# 创建一个管理员富相
-admin = Admin('fuxiang', 'li', 18)
+if __name__ == '__main__':
+    # 创建一个管理员实例
+    admin = Admin('fang', 'li', 18)
 
-# 调用 show_privileges方法
-admin.privileges.show_privileges()
+    # 调用 show_privileges方法
+    admin.privileges.show_privileges()
 
-
-p_privileges = ['can add post', 'can delete post', 'can ban user']
-admin.privileges.privileges = p_privileges # 给管理员添加权限
-admin.privileges.show_privileges() # 展示新添加的管理员权限
+    p_privileges = ['can add post', 'can delete post', 'can ban user']
+    admin.privileges.privileges = p_privileges # 给管理员添加权限
+    admin.privileges.show_privileges() # 展示新添加的管理员权限
