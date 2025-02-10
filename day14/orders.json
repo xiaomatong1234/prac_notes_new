@@ -1,0 +1,17 @@
+[
+    {
+        "CommodityName": "apple",
+        "CommodityAmount": 23,
+        "CommodityPrice": 13.0
+    },
+    {
+        "CommodityName": "hola",
+        "CommodityAmount": 34,
+        "CommodityPrice": 23.0
+    },
+    {
+        "CommodityName": "sandwish",
+        "CommodityAmount": 12,
+        "CommodityPrice": 13.0
+    }
+]

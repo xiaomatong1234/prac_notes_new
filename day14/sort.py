@@ -8,7 +8,7 @@ students = [
     {'name': 'Frank', 'id': '1006', 'class': 'Class2'}
 ]
 # TypeError: '<' not supported between instances of 'dict' and 'dict'
-# students.sort()
+# students.txt.sort()
 
 
 # 以名字排序
@@ -28,7 +28,7 @@ def test_filter():
     r = filter(lambda x:x>2, a)
 
 
-def test_filter():
+def test_filter2():
     a=[1,2,3]
     r = filter(lambda x:x>2, a)
     print(list(r))
