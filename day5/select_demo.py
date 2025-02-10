@@ -38,23 +38,23 @@ if __name__ == '__main__':
 
 
 
-# 有问题的代码
-def select_sort():
-    data = [98,56,5,89]
-    length = len(data)
-    for i in range(length-1):
-        small = data[i] # 代码问题的原因：每次玄幻small的值都没有变
-        for j in range(i+1,length):
-            if data[j] < small:
-                idx = j
-                data[idx],data[i] = data[i],data[idx]
-                #
-                # """
-                # i = 0 data[i]=98
-                # j = 1 data[j]=56
-                #
-                # """
-    return data
-if __name__ == '__main__':
-    print(select_sort())
+# # 有问题的代码
+# def select_sort():
+#     data = [98,56,5,89]
+#     length = len(data)
+#     for i in range(length-1):
+#         small = data[i] # 代码问题的原因：每次玄幻small的值都没有变
+#         for j in range(i+1,length):
+#             if data[j] < small:
+#                 idx = j
+#                 data[idx],data[i] = data[i],data[idx]
+#                 #
+#                 # """
+#                 # i = 0 data[i]=98
+#                 # j = 1 data[j]=56
+#                 #
+#                 # """
+#     return data
+# if __name__ == '__main__':
+#     print(select_sort())
 

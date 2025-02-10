@@ -1,4 +1,4 @@
-from prac.chap9.chap9_5 import User
+from prac.basic_demo.chap9.chap9_5 import User
 
 
 class Admin(User):

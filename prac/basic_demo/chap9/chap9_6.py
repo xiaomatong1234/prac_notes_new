@@ -1,4 +1,4 @@
-from prac.chap9.chap9_4 import Restaurant
+from prac.basic_demo.chap9.chap9_4 import Restaurant
 
 
 class IceCreamStand(Restaurant):

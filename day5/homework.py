@@ -13,9 +13,9 @@
 def lst_sort():
     swap_count = 0
     lst =[]
-    for str in strs.split(","):
+    for s in strs.split(","):
         # print(f'\n\n-------------当前输入的数--{str}')
-        lst.append(int(str))
+        lst.append(int(s))
 
     for i in range(len(lst)-1):
         for j in range(len(lst)-1-i):

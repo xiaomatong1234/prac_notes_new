@@ -26,14 +26,14 @@ class Ecommerce:
 
 # 商品列表
 goods_list =[
-    {'name':'手机','price':100,'discount':12},
-    {'name':'电脑','price':500,'discount':10},
-    {'name':'电视','price':300,'discount':8},
-    {'name':'冰箱','price':200,'discount':6}
+    {'name':'手机','prices':100,'discount':12},
+    {'name':'电脑','prices':500,'discount':10},
+    {'name':'电视','prices':300,'discount':8},
+    {'name':'冰箱','prices':200,'discount':6}
 ]
 # 遍历商品列表，计算折扣后的价格
 for good in goods_list:
-    print(f'{good["name"]}的原价为：{good["price"]}，折扣后的价格为：{Ecommerce.calculate_discount(good["price"],good["discount"])}')
+    print(f'{good["name"]}的原价为：{good["prices"]}，折扣后的价格为：{Ecommerce.calculate_discount(good["prices"],good["discount"])}')
 
 
 

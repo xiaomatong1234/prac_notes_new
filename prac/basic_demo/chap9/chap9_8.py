@@ -1,4 +1,4 @@
-from prac.chap9.chap9_5 import User
+from prac.basic_demo.chap9.chap9_5 import User
 class Privileges:
     """创建一个privileges类"""
     def __init__(self):

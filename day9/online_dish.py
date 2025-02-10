@@ -43,7 +43,7 @@ class OnlineDish:
     """定义在线点餐系统类"""
     def __init__(self):
         self.dishes = {} # 定义一个菜单字典
-        self.orders = {} # 键：customer对象  值：顾客点餐信息self.order
+        self.orders = {} # 键：customer对象  值：顾客点餐信息self.dishes
     def add_dish(self,dish):
         """
         添加菜品
@@ -83,7 +83,6 @@ class OnlineDish:
         # 判断菜品库存是否大于0
         if self.dishes[dish.dish_id].dish_nums > 0:
             self.dishes[dish.dish_id].dish_nums -= num
-
             customer.order[dish]= num # 获取顾客下单
             self.orders[customer] = customer.order  # 系统中订单增加顾客下单
 
@@ -148,3 +147,6 @@ od.total_amount(dish2,2)
 # od.add_order(customer1)
 # od.add_order(customer1)
 od.show_all_orders()
+
+
+# 在类里面用self来调用类里面的属性和方法，在其它类里面使用实例对象/参数来来调用类里面的属性和方法

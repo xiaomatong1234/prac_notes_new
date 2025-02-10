@@ -65,12 +65,9 @@ print("----------------等腰三角----------------")
 * * * * * 
       * * *
 """
-# for i in range(5):
-#     for j in range(5-i-1):
-#         print(" ", end=" ")
-#     print("* "*(i*2+1))
-
 for i in range(5):
-    for j in range(5 - i - 1):
+    for j in range(5-i-1):
         print(" ", end=" ")
-    print("* " * (i * 2 + 1))
+    print("* "*(i*2+1))
+
+
