@@ -18,49 +18,63 @@ import json
 import random
 from typing import Dict
 
-
+def log():
+    pass
 def read_coupon_file(filename):
     try:
         with open(filename, 'r') as file:
             # 初始化优惠券列表
-            coupon_lst  = []
+            coupons  = {}
             # 读取 JSON 文件
-            data = json.load(file)
-            for line in data:
-                product_name,discount = line.strip().split(',')
-                coupon_lst[product_name] = float(discount)
-            return coupon_lst
+            coupons_data = json.load(file)
+
+            return coupons_data
     except FileNotFoundError:
         print('文件不存在，新创建一个文件')
         with open(filename, 'w', encoding='utf-8') as file:
-            pass
+            json.dump({}, file, ensure_ascii=False, indent=4)
         return {}
-    except ValueError:
+    except json.JSONDecodeError:
         print('请检查文件格式是否正确！')
         return {}
-def write_coupon_file(filename:str, coupon_lst: Dict[str, int]):
+def write_coupon_file(filename, coupons):
     try:
         with open(filename, 'w', encoding='utf-8') as file:
-            json.dump(coupon_lst, file, ensure_ascii=False, indent=4)
+            json.dump(coupons, file, ensure_ascii=False, indent=4)
     except Exception as e:
         print(f'写入文件时出错{e}')
-def query_coupon(filename):
+def query_coupon(coupons):
     """选择查看当前优惠"""
-    pass
-def update_coupon(filename):
+    if not coupons:
+        print('商品优惠管理内容为空\n')
+    else:
+        for product_name, discount in coupons.items():
+            print(f'商品{product_name}:{discount}%折扣')
+def update_coupon(filename,coupons,product_name,new_discount):
     """申请新的优惠券"""
-    pass
-def add_coupon(filename,product_name,discount):
+    if product_name in coupons:
+        coupons[product_name] = new_discount
+        write_coupon_file(filename, coupons)
+        print(f'更新商品{product_name}:{new_discount}%折扣\n')
+    else:
+        print(f'商品{product_name}不存在\n')
+def add_coupon(filename,coupons,product_name,discount):
     """添加优惠"""
-    pass
-def del_coupon(filename):
+    if product_name in coupons:
+        print(f'商品{product_name}已存在，请重新输入！！！\n')
+    else:
+        coupons[product_name] = discount
+        write_coupon_file(filename, coupons)
+        print(f'-商品{product_name}:{discount}%折扣,添加成功！！！')
+def del_coupon(coupons):
     """删除过期或错误的优惠信息"""
     pass
+
 def coupon_manage():
     filename = 'coupon.json'
-    coupon_lst = read_coupon_file(filename)
+    coupons = read_coupon_file(filename)
     while True:
-        print('请选择下列操作：\n'
+        print('\n请选择下列操作：\n'
               '1.查询当前优惠\n'
               '2.更改新的优惠\n'
               '3.添加优惠信息\n'
@@ -69,24 +83,26 @@ def coupon_manage():
         try:
             choice = int(input('请输入操作编号：'))
             if choice == 1:
-                query_coupon(filename)
+                query_coupon(coupons)
             elif choice == 2:
-                update_coupon(filename)
-                write_coupon_file(filename, coupon_lst)
+                product_name = input('请输入商品名称：')
+                new_discount = random.randint(1,90)
+                update_coupon(filename,coupons,product_name,new_discount)
+
             elif choice == 3:
                 product_name = input('请输入商品名称：')
-                discount = random.randint(1,10)
-                add_coupon(filename,product_name,discount)
-                write_coupon_file(filename, coupon_lst)
+                discount = random.randint(1,90)
+                add_coupon(filename,coupons,product_name,discount)
+
             elif choice == 4:
-                del_coupon(filename)
-                write_coupon_file(filename, coupon_lst)
+                del_coupon(coupons)
+                write_coupon_file(filename, coupons)
             else:
                 print('已退出当前系统！！')
-                write_coupon_file(filename, coupon_lst)
+                write_coupon_file(filename, coupons)
                 break
         except ValueError:
-            print('请输入正整数！！！')
+            print('请输入正整数！！！\n')
 
 
 if __name__ == '__main__':

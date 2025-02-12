@@ -101,6 +101,7 @@ def inventory_manage():
                     print('库存数量应为数字。。。。。。',f'\n报错信息：{e}')
             elif choice == 4:
                 # print('已退出当前系统！！！\n')
+                write_inventory(filename, inventory)
                 print('-'*20,'已退出当前系统!','-'*35)
                 sys.exit()
             else:

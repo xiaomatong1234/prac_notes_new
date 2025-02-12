@@ -1,4 +1,6 @@
 """销售数据管理与分析"""
+import copy
+
 # 商品列表
 product_lst = []
 
@@ -11,15 +13,15 @@ product_lst = []
 def add_sales(product_names, quantities, prices):
     # 单个商品信息
     product_info = {
-        "product_names": product_name,
-        "quantities": quantity,
-        "prices": price
+        "product_names": product_names,
+        "quantities": quantities,
+        "prices": prices
     }
 
     product_lst.append(product_info)
     return product_lst
 
-# 用户输入添加销售记录
+# 用户输入销售产品信息
 product_name = input('请输入产品名称：')
 quantity =  float(input('请输入产品数量：'))
 price =  float(input('请输入产品价格：'))
@@ -37,7 +39,7 @@ def update_sales(product_names, new_quantities, new_prices):
             product["quantities"] = new_quantities
             product["prices"] = new_prices
             return f'商品 {product_names} 更新成功！'
-        return '该产品不在商品列表中！！'
+    return '该产品不在商品列表中！！'
 
 # 用户输入更新销售记录
 product_name = input('请输入产品名称：')
@@ -70,12 +72,34 @@ print(f'展示当前商品列表：{product_lst}')
 展示商品信息列表
 """
 def total_sales():
+    total_amounts = 0
     if product_lst:
         for product in product_lst:
-            amount = product["quantities"] * product["prices"]
-            return amount
+            total_amounts += product["quantities"] * product["prices"]
+            return total_amounts
     return "商品列表不存在"
 
 total_sales()
 print('总销售额为：',total_sales())
 print(f'系统中的全部商品信息为{product_lst}')
+
+# 备份销售数据
+def deep_copy_sales():
+    copy_sales = copy.deepcopy(product_lst)
+    return copy_sales
+
+print('展示已备份的销售数据：',deep_copy_sales())
+
+# 恢复销售数据
+def recover_sales():
+    pass
+
+# 修改备份数据
+"""
+输入备份数据修改信息
+查看浅拷贝与深拷贝的区别
+"""
+def change_sales():
+    pass
+
+# 销售数据管理系统

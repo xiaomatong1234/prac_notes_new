@@ -38,17 +38,17 @@ l2 = [1,2,3,True,[1,2,3,4]]
 # del l1[0]
 # print(l1)
 # l1.remove(1)
-# students = [["Anna", 90], ["Tom", 78], ["Jerry", 85], ["Lucy", 92]]
-# total = len(students)
+# students.txt = [["Anna", 90], ["Tom", 78], ["Jerry", 85], ["Lucy", 92]]
+# total = len(students.txt)
 # print('学生总人数为：', total)
 # # "Mark"（87分）和 "Eva"（80分）
 #
-# add_student1 = students.extend([["Mark",87],["Eva",80]])
+# add_student1 = students.txt.extend([["Mark",87],["Eva",80]])
 #
-# print(f'打印一下学生：{students}')
+# print(f'打印一下学生：{students.txt}')
 #
-# del students[1]
-# print(f'当前学生数量为：{students}')
+# del students.txt[1]
+# print(f'当前学生数量为：{students.txt}')
 
 '''
 实战代码
