@@ -1,9 +1,0 @@
-add_score:
-  P1:
-    datas:
-      - ['math',0]
-      - ['chinese',24]
-      - ['english',25]
-
-
-
