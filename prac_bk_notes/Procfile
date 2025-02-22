@@ -1,1 +1,2 @@
+export PYTHONPATH=/opt/render/project/src
 gunicorn "notes:create_app()"
