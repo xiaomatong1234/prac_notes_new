@@ -27,4 +27,3 @@ PyYAML==6.0.2
 six==1.17.0
 tomlkit==0.13.2
 Werkzeug==3.1.3
--e git+ssh://git@gitlab.stuq.ceshiren.com/qrz/qrz5_student/demo_project.git@704a7dc11172325307b6039852ee7fb00ea5984b#egg=xxx
