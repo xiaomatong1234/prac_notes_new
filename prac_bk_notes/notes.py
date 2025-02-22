@@ -86,9 +86,9 @@ def note_detail(nid):
             "errcode":-1,
             "errmsg":"note not found"
         },400
-
+app.register_blueprint(notes_bp)
 if __name__ == '__main__':
-    app.register_blueprint(notes_bp)
+
 
     app.run(debug=True)
 
