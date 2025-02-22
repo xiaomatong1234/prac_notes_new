@@ -1,39 +1,17 @@
 import json
 
 from flask import Flask,Blueprint, render_template, request, redirect, url_for
+import os
 
-app = Flask(__name__)
+# 打印当前工作目录
+print ("Current working directory:", os.getcwd ())
+print("Template folder:", os.path.join(os.getcwd(), 'templates'))
+
+app = Flask(__name__,template_folder='templates')
 # 应用启动时加载 JSON 数据
 with open('data/notes_db.json','r') as json_file:
     notes_db = json.load(json_file)
-# notes_db=[
-#     {"id":1,
-#      "title":"《python语言》",
-#      "author":"作者：a123",
-#      "content":"一大段长文字一大段长文字一大段长文字一大段长文字一大段长文字一大段长文字一大段长文字一大段长文字"
-#                "一大段长文字一大段长文字一大段长文字一大段长文字一大段长文字一大段长文字一大段长文字一大段长文字"
-#                "一大段长文字一大段长文字一大段长文字一大段长文字一大段长文字一大段长文字一大段长文字一大段长文字"
-#                "一大段长文字一大段长文字一大段长文字一大段长文字一大段长文字一大段长文字一大段长文字一大段长文字"
-#                "一大段长文字一大段长文字一大段长文字一大段长文字一大段长文字一大段长文字一大段长文字一大段长文字"
-#                "一大段长文字一大段长文字一大段长文字一大段长文字一大段长文字一大段长文字一大段长文字一大段长文字"
-#                "一大段长文字一大段长文字一大段长文字一大段长文字一大段长文字一大段长文字一大段长文字一大段长文字"
-#                "一大段长文字一大段长文字一大段长文字一大段长文字一大段长文字一大段长文字一大段长文字一大段长文字"
-#                "一大段长文字一大段长文字一大段长文字一大段长文字一大段长文字一大段长文字一大段长文字一大段长文字"
-#                "一大段长文字一大段长文字一大段长文字一大段长文字一大段长文字一大段长文字一大段长文字一大段长文字"},
-#     {"id":2,
-#      "title":"《Java语言》",
-#      "author":"b123",
-#      "content":"一大段长文字2"},
-#     {"id": 3,
-#      "title": "《php语言》",
-#      "author": "c123",
-#      "content": "一大段长文字3"},
-#     {"id": 4,
-#      "title": "《go语言》",
-#      "author": "d123",
-#      "content": "一大段长文字4"}
-#
-# ]
+
 notes_bp = Blueprint('notes', __name__, url_prefix='/notes')
 """
 首页展示笔记：
@@ -111,4 +89,7 @@ def note_detail(nid):
 
 if __name__ == '__main__':
     app.register_blueprint(notes_bp)
+
     app.run(debug=True)
+
+
