@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>简单的网页</title>
+  <style>
+    /* 导航栏样式 */
+.nav {
+    background-color: #FF6347; /* 番茄红 */
+    padding: 15px;
+    text-align: center;
+}
+.nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.nav ul li {
+    display: inline-block;
+    margin: 0 20px;
+}
+.nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 5px 10px;
+}
+.nav ul li a:hover {
+    background-color: #FF4500; /* 暗番茄红 */
+    border-radius: 5px;
+}
+
+/* 页面主体内容样式 */
+.content {
+    max-width: 900px;
+    margin: 40px auto;
+    text-align: left;
+    font-family: Arial, sans-serif;
+}
+.content h1 {
+    text-align: center;
+    color: #333;
+}
+.content p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #666;
+}
+.content a {
+    color: #1E90FF;
+    text-decoration: none;
+    font-weight: bold;
+}
+.content a:hover {
+    text-decoration: underline;
+}
+
+/* 表格样式 */
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+table caption {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+table th, table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* 表单样式 */
+form {
+    margin-top: 30px;
+}
+form input[type="text"], form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+form input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+form input[type="submit"]:hover {
+    background-color: #45a049;
+}
+  </style>
+</head>
+<body>
+<div class="nav">
+  <ul>
+    <li><a href="#">主页</a></li>
+    <li><a href="#">关于我们</a></li>
+    <li><a href="#">联系我们</a></li>
+  </ul>
+</div>
+<div>
+<a href="http://www.baidu.com" target="_blank">超级链接</a>
+  <p>添加学生信息表格</p>
+  <table>
+    <thead>
+    <tr>
+      <td>学号</td>
+      <td>姓名</td>
+      <td>年龄</td>
+    </tr>
+    <tr>
+      <td>101</td>
+      <td>章三</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <td>102</td>
+      <td>李四</td>
+      <td>12</td>
+    </tr>
+    </thead>
+  </table>
+  <p>添加注册表单</p>
+  <form action="/login" method="post">
+    <label>
+      用户名：
+      <input type="text" name="username" placeholder="请输入你的用户名" required>
+    </label>
+    <label>
+      密码：
+      <input type="password" name="password" placeholder="请输入密码" required>
+    </label>
+    <input type="submit">
+  </form>
+
+</div>
+
+
+</body>
+</html>
+<script type="text/javascript"></script>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>个人博客</title>
+</head>
+<body>
+渲染所有文章标题
+<ul>
+   {% for blog in blogs %}
+    <li>
+        <a href ="/blog/{{ blog.id }}">
+<!--        <a href="{{ url_for('show_blog_info', blog_id = blog.id) }}">-->
+        {{ blog.title }}
+        </a>
+
+    </li>
+    {% endfor %}
+</ul>
+渲染单篇文章详情
+</body>
+</html>
+<script type="text/javascript"></script>

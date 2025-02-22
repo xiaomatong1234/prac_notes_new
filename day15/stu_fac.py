@@ -24,6 +24,7 @@ def rollback(s):
 if __name__ == '__main__':
     string = rollback("hello")
     print('反转后的字符串为：',string)
+
 """
 课堂练习：数组求和
 使用递归计算一个列表中所有元素的和，例如列表 [1,2,3,4,5] 的和为 15

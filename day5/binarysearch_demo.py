@@ -22,8 +22,8 @@ def binary_search(arr,target_num):
     return -1
 
 
-arr = [1, 2, 3, 4, 5,6]
+arr = [1,2,3,4]
 if __name__ == '__main__':
-    print(arr[binary_search(arr, 5)])
+    print(arr[binary_search(arr, 1)])
 
 

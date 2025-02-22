@@ -20,6 +20,7 @@ def get_yaml():
     return data
 
 class TestWeatherFixture:
+    @pytest.mark.run(order=2)
     @pytest.mark.parametrize(
         "city,expected", get_yaml().items()
     )

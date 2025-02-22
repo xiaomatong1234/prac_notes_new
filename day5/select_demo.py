@@ -17,8 +17,7 @@ def select_demo(arr):
     #外层循环
     for i in range(len(arr)-1): # i 未排序状态的值
         min_idx = i # 定义最小值下角标index
-        print(f'min_dex的值为：{min_idx}')
-
+        # print(f'min_dex的值为：{min_idx}')
         #内层循环
         # 获取到最小值的索引
         for j in range(i+1, len(arr)): #数值从左往右开始比较

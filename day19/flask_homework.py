@@ -36,8 +36,6 @@ def register():
     return {"errcode": 0,
             "msg": "User registered successfully"}
 
-
-
 @app.route('/login',methods=['POST'])
 def login():
     # 获取json请求体格式
