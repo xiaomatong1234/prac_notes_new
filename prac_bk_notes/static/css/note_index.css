@@ -1,0 +1,95 @@
+/** 全局样式 **/
+body {
+    font-family: Arial, sans-serif; /* 使用Arial字体 */
+    background-color: #f7f7f7; /* 背景颜色为浅灰色 */
+    margin: 20px; /* 设置body的外边距为20px */
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* 垂直排列内容 */
+    align-items: center; /* 内容居中 */
+    min-height: calc(100vh - 40px); /* 最小高度为视口高度减去上下外边距 */
+    position: relative; /* 设置相对定位，用于子元素的绝对定位 */
+}
+
+/** 返回首页按钮容器 **/
+.back-to-home {
+    position: fixed; /* 固定定位 */
+    bottom: 20px; /* 距离底部20px */
+    right: 20px; /* 距离右侧20px */
+    z-index: 1000; /* 确保按钮在最上层 */
+}
+
+/** 返回首页按钮样式 **/
+.back-to-home button {
+    background-color: #007bff; /* 背景颜色为蓝色 */
+    color: white; /* 文字颜色为白色 */
+    padding: 0.5rem 1rem; /* 内边距调整为0.5rem上下，1rem左右 */
+    border: none; /* 去掉边框 */
+    border-radius: 5px; /* 圆角效果 */
+    cursor: pointer; /* 鼠标悬停时显示手型 */
+    font-size: 1rem; /* 字体大小 */
+    transition: background-color 0.3s ease; /* 背景颜色过渡效果 */
+}
+
+.back-to-home button:hover {
+    background-color: #0056b3; /* 鼠标悬停时背景颜色变深 */
+}
+
+/** 列表页笔记样式 **/
+.notes-list {
+    color: black; /* 设置标题颜色为黑色 */
+    list-style-type: none; /* 移除默认的顺序编号 */
+    padding-left: 0; /* 去掉左侧内边距 */
+    margin-bottom: 10px; /* 设置列表项之间的间距 */
+    text-align: left; /* 确保文本左对齐 */
+    width: 100%; /* 宽度占满父容器 */
+    max-width: 600px; /* 最大宽度为600px */
+    margin-top: 20px; /* 设置列表与顶部的外边距为20px */
+}
+
+/** 列表项样式 **/
+.notes-list li {
+    margin-bottom: 1rem; /* 设置列表项之间的间距 */
+    text-align: left; /* 确保每个列表项内容左对齐 */
+    background-color: #fff; /* 背景颜色为白色 */
+    padding: 1rem; /* 内边距调整为1rem */
+    border-radius: 8px; /* 圆角效果 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
+}
+
+/** 书籍缩略图样式 **/
+.notes-list li img {
+    width: 60px; /* 设置图片宽度为60px */
+    height: auto; /* 高度自动调整 */
+    border-radius: 5px; /* 圆角效果 */
+    margin-right: 1rem; /* 图片和文本之间的间隔 */
+}
+
+/** 链接样式 **/
+.notes-list a {
+    text-decoration: none; /* 去除默认的链接下划线 */
+    color: #666666; /* 设置为柔和的浅灰色 */
+    margin-right: 1rem; /* 设置链接之间的间隔 */
+}
+
+.notes-list a:hover {
+    color: #444444; /* 鼠标悬停时变成深灰色 */
+    text-decoration: underline; /* 鼠标悬停时添加下划线 */
+    transition: color 0.3s ease; /* 平滑过渡效果 */
+}
+
+/** 响应式布局 **/
+@media (max-width: 768px) {
+    body {
+        margin: 10px; /* 小屏幕上，body的外边距减小为10px */
+    }
+    h1 {
+        font-size: 1.5rem; /* 小屏幕上，标题字体变小 */
+    }
+    .notes-list li {
+        padding: 0.75rem; /* 更小的内边距 */
+    }
+    .back-to-home button {
+        padding: 0.5rem; /* 更小的内边距 */
+    }
+}

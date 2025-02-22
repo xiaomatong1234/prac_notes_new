@@ -1,0 +1,211 @@
+/* 首页布局 */
+.home-page {
+    display: flex;
+    flex-direction: column;   /* 使元素纵向排列 */
+    justify-content: center; /* 水平居中 */
+    align-items: center;     /* 垂直居中 */
+    height: 100vh;           /* 使 body 高度为视口高度 */
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    line-height: 1.6;
+    background: linear-gradient(to bottom, #f2f2f2, #cccccc); /* 设置背景从浅灰到深灰的渐变 */
+    color: #333333;
+    padding: 0;
+}
+
+.centered-text {
+    font-size: 4.5vw;         /* 字体大小为视口宽度的 4.5%（适当缩小标题） */
+    text-align: center;      /* 文字水平居中 */
+    margin-bottom: 15px;    /* 标题和菜单之间的间距 */
+    color: #444;  /* 调整标题颜色为柔和深灰色 */
+}
+
+
+.container {
+    width: 80%;              /* 容器宽度为视口宽度的 80% */
+    margin: 0 auto;          /* 使容器水平居中 */
+    padding: 20px;           /* 内边距设置为 20px */
+}
+
+/*首页菜单样式*/
+.menu {
+    font-size: 2.5vw;              /* 菜单字体大小为视口宽度的 4% */
+    list-style: none;            /* 去掉默认的列表样式（如圆点） */
+    padding: 0;
+    text-align: center;          /* 菜单项居中 */
+}
+
+.menu li {
+    margin: 8px 0;              /* 给每个菜单项添加上下间距 */
+    font-size: 1.1em;            /* 设置字体大小 */
+}
+
+.menu a {
+    text-decoration: none;       /* 去掉链接下划线 */
+    color: #333;                 /* 设置字体颜色 */
+}
+
+.menu a:hover {
+    color: #555;                 /* 鼠标悬停时字体颜色变浅 */
+    text-decoration: underline;  /* 鼠标悬停时添加下划线 */
+    transition: color 0.3s ease; /* 添加平滑过渡效果 */
+}
+
+/* 列表页笔记样式 */
+.notes-list {
+    color: black; /* 设置标题颜色为黑色 */
+    list-style-type: none; /* 移除默认的顺序编号 */
+    padding-left: 0;       /* 去掉左侧内边距 */
+    margin-bottom: 10px;  /* 设置列表项之间的间距 */
+    text-align: left;   /* 确保文本左对齐 */
+    align-items: center;    /* 垂直居中对齐 */
+}
+/* 设置列表项之间的间距，并保证它们左对齐 */
+.notes-list li {
+    margin-bottom: 15px;  /* 设置列表项之间的间距 */
+    text-align: left;     /* 确保每个列表项内容左对齐 */
+}
+/* 书籍缩略图样式 */
+.notes-list li img {
+    width: 60px;                  /* 设置图片宽度为 60px */
+    height: auto;                 /* 高度自动调整，保持图片比例 */
+    border-radius: 5px;           /* 设置圆角效果 */
+    margin-right: 20px;           /* 图片和文本之间的间隔 */
+}
+
+
+/* 链接样式 */
+.notes-list a {
+    text-decoration: none;    /* 去除默认的链接下划线 */
+    color: #666666;           /* 设置为柔和的浅灰色 */
+    margin-right: 15px;       /* 设置链接之间的间隔 */
+}
+
+.notes-list a:hover {
+    color: #444444;           /* 鼠标悬停时变成深灰色，增加对比 */
+    text-decoration: underline; /* 鼠标悬停时添加下划线 */
+    transition: color 0.3s ease; /* 平滑过渡效果 */
+}
+
+/* 单个笔记项的样式 */
+.note-item {
+    background-color: #f7f7f7; /* 使用温暖的浅灰色背景，与灰色首页背景协调 */
+    margin-bottom: 20px;       /* 保持每个笔记项之间有空隙 */
+    padding: 20px;             /* 设置内边距，避免内容紧贴边缘 */
+    border-radius: 8px;        /* 设置圆角，使元素更加柔和 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 保留轻微的阴影效果 */
+}
+.note-item .date-created {
+    font-size: 0.9em; /* 设置日期字体大小为默认字体的 0.9 倍 */
+    color: #999; /* 设置日期的颜色为浅灰色 */
+}
+
+
+/* 响应式布局：字体自适应 */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem; /* 小屏幕上，标题字体变小 */
+    }
+    .note-item {
+        padding: 15px; /* 更小的内边距 */
+    }
+    .note-item .date-created {
+        font-size: 0.8rem; /* 日期字体更小 */
+    }
+}
+
+
+/* 笔记详情页面样式 */
+.note-detail {
+    background-color: #fff;                /* 背景颜色设置为白色 */
+    padding: 20px;                          /* 设置内边距为 20px，使内容与边缘保持距离 */
+    border-radius: 8px;                     /* 设置圆角边框，使元素看起来更加柔和 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加轻微的阴影效果，使元素浮动感更强 */
+    display: flex;                          /* 使用 Flexbox 布局方式来排列元素 */
+    flex-direction: column;                 /* 元素排列方向为垂直，即纵向排列 */
+    justify-content: space-between;         /* 在垂直方向上，顶部与底部的内容之间留有空间 */
+    height: 100%;                           /* 让容器填满父容器的高度，这样确保底部内容固定 */
+}
+/* 书名标题居中 */
+.note-detail h2 {
+    font-size: 2em;                         /* 设置标题的字体大小为 2 倍默认大小 */
+    text-align: center;                     /* 设置标题居中显示 */
+    margin-bottom: 10px;                    /* 设置标题与下面元素之间的间距为 10px */
+    color: #339;                            /* 设置标题文字颜色为深蓝色 */
+}
+/* 作者，靠右显示 */
+.note-detail .author {
+    font-size: 1.2em;                      /* 设置作者字体大小为默认的 1.2 倍 */
+    color: #777;                           /* 设置作者文字颜色为浅灰色 */
+    text-align: center;                     /* 将作者文本右对齐 */
+    margin-bottom: 10px;                   /* 设置作者与下方内容之间的间距为 10px */
+}
+/*图片*/
+.note-detail img {
+    max-width: 40%;              /* 图片宽度最大为容器宽度的40% */
+    height: auto;                /* 高度自动调整，保持比例 */
+    margin-right: 20px;          /* 图片与文本之间有一定间距 */
+    border-radius: 5px;          /* 给图片添加圆角（可选） */
+}
+
+.note-detail .content {
+    flex-grow: 1;                /* 让文本内容区域占据剩余空间 */
+}
+/* 内容区域 */
+.note-detail .content {
+    font-size: 1.1em;                      /* 设置内容字体大小为默认字体的 1.1 倍 */
+    line-height: 1.8;                      /* 设置行高为 1.8，增强文本可读性 */
+    color: #555;                           /* 设置内容文本的颜色为深灰色 */
+    flex-grow: 1;                          /* 使内容区域占满剩余空间 */
+    text-align: justify;                   /* 设置内容文本两端对齐 */
+}
+/* 底部时间显示 */
+.note-detail .date-created {
+    font-size: 0.9em;                      /* 设置日期字体大小为默认字体的 0.9 倍 */
+    color: #999;                           /* 设置日期文字颜色为浅灰色 */
+    text-align: right;                    /* 将日期文本居中显示 */
+    margin-top: 20px;                      /* 设置日期与上方内容之间的间距为 20px */
+}
+
+/* 链接样式 */
+a {
+    color: #6c757d; /* 默认颜色为柔和的灰色 */
+    text-decoration: none;/* 去除链接的默认下划线 */
+    transition: color 0.3s ease; /*设置元素状态变化的平滑过渡效果*/
+}
+
+a:hover {
+    color: #495057; /* 鼠标悬停时变成稍深的灰色 */
+}
+
+
+/* 按钮样式 */
+button {
+    background-color: #4CAF50;   /* 设置按钮背景颜色为绿色 */
+    color: white;                 /* 设置按钮文本颜色为白色 */
+    padding: 10px 20px;           /* 设置按钮内边距，垂直方向 10px，水平方向 20px */
+    border: none;                 /* 去掉按钮的默认边框 */
+    border-radius: 5px;           /* 设置按钮的圆角效果 */
+    cursor: pointer;             /* 鼠标悬停时，显示为手形光标，表明按钮是可点击的 */
+}
+
+button:hover {
+    background-color: #45a049;   /* 鼠标悬停时，按钮的背景颜色变成稍深的绿色 */
+}
+
+/* 响应式布局 */
+@media (max-width: 768px) {
+    .container {
+        width: 95%; /* 当屏幕宽度小于或等于768px时，容器的宽度变为视口宽度的95% */
+    }
+
+    .note-item {
+        padding: 15px; /* 调整笔记项的内边距，减小为15px */
+    }
+
+    .note-detail {
+        padding: 15px; /* 调整笔记详情的内边距，减小为15px */
+    }
+}

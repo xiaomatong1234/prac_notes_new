@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/note_index.css') }}"/>
+    <title>欢迎来到花花的世界</title>
+</head>
+<body class="note-item">
+    <!-- 返回首页按钮 -->
+    <div class="back-to-home">
+        <button onclick="window.location.href='/'">返回首页</button>
+    </div>
+
+    <!-- 笔记列表 -->
+    <ol class="notes-list">
+        {% for note in notes %}
+        <li>
+            <h1>
+                <img src="{{ url_for('static', filename='img/note.jpg') }}" alt="{{ note.title }}" />
+                <a href="/notes/{{ note.id }}">
+                    {{ note.title }}
+                </a>
+                <a>
+                    {{ note.author }}
+                </a>
+                <a>
+                    {{ note.date }}
+                </a>
+            </h1>
+        </li>
+        {% endfor %}
+    </ol>
+</body>
+</html>
