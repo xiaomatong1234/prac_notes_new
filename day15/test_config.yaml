@@ -1,5 +1,0 @@
-app_name: TestApp
-libraries:
-- numpy
-- pandas
-version: '0.1'
